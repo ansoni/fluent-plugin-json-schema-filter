@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.1.7
+addons:
+  code_climate:
+    repo_token: 
+      secure: "NMBT2Ohq/nfli81tvqbsGQqVE/90PLHr+29jFVBXGD37/aZE8OXEDOCvMU/snDsZ7YpXpvAabAHyg8WnmPvIAVgtJjf6osDDhimgp0I2/HbaDIA27QwlOzINdT19bv/0iNAk3RMCxLPXIxN+On9T3tcaxrANHFz4e32edis0tiYmebvWimPjMqwufOEIwwiteXz2r0lyNPnpg1MXZsZ1KJJPyGfyKzLMVdqprSo23/IqoqICNaOjpXiKkzFoYtRFmyq8cIyyd42TlS2XgbtOAj+sKcWYPRKjav8MoVt7e9oFSCgB2K1FaLmZijUXDzg6hWOFuKzTPjcMRI+RMW5W+FssqDUm6Gr5Qi5aLOeobLubDUo8fKrS4seZxIuJpHQKtA9Kj2YAXkUrSpWRJZ9UHoCjaEr0vcxccC8cpXK+vzW31Ah5wtpkz9JAa4OS3x++e7L+HjuLD6A+gSKehsZr4MyNKDB01CCeORL4tlR8drIv8yUlZZg2F8JS/rTZsQQbfF6l2gXCQA5fyqdl3K4W+3ejv6Z82zfPf6+5DjKEgQr3041MLqwsoOoopOMEkAMkSh401vWdQVmp7+7bTrJ8zqu56L9SvjHIjZfVxlCrum6IuU5N1YXCHWf/tH/uecGSg35yFqlRpG1TF+ucEj6OrMYbwHGR4BbPqhSHe5VkfrE="
+deploy:
+  provider: rubygems
+  api_key:
+    secure: "SZmpblvkp0G7AlQQ8e/tmOh3PhG8wMhdf+eUSjKnEhYe71PMKtJBGht8TpunRX9p+mJZVg4FGpsfNRhFb/9FQ0MaE2FS+ymzJVnIh8u/8n5fFiLqQGjs3FEVw0jxGwlRFuI/vXmoXwpvdKi89OfuVw9ibZJnNOiIjO/+1L/BoWTr+TFnVJSMxpV0sl/S5a7gBwGrFlifRpMzFIcyVwfxtv/VXXZMQOPkdq4yLmjKEKf00eZuKPl/TCd4P9qYolD+9CqR0fo8Op6KU8ebgMnXGuMaMD6Z7bST6ctjYFQB1Q6hpVFItxJxYUqCdrtkMkXPZvpwRU+6V/coVnx+cw1nAvqk7smnJIwaMO2mBqYYSrhsUGXBSBIToWYPvB+B1dN9DW2QlU3rcQI9HrDBywo3RcvfWNSCjPOIRXXpqwVPrvzyd7K+01vg7qO41adaLBju6Y2sh8WPem/ZfnIXjF/71VZgN0UVpokcPyWTCcLVV0+OJzrmK3maXT2+4DOxBb2S1GU7M5F4kg7PVRu8xTLVbnS3Wv8YrY/ix9bajIGXh4EvKVbyYNkAW/QZDiGsPEI9hg2BGavr19mtXCelJyuCdFeW4AEGptBcIj60e3G6quH1b+2YoCzkG7Qvx3+h9cyGmHj0Gwl2ypqMqxKAyOvh8nKFM9JVr4BcDhj1CFhiwB0="
+  gem: fluent-plugin-json-schema-filter
+  on:
+    repo: ansoni/fluent-plugin-json-schema-filter
+    branch: master
