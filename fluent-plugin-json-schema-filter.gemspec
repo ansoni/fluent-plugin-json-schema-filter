@@ -19,10 +19,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "json-schema", "~> 2.6"
   spec.add_development_dependency "travis", "~> 1.8"
   spec.add_development_dependency "test-unit", ">= 3.1.0"
   spec.add_development_dependency "codeclimate-test-reporter"
   spec.add_runtime_dependency "fluentd"
-  spec.add_runtime_dependency "json-schema"
+  spec.add_runtime_dependency "json-schema", "~> 2.6"
 end
