@@ -1,6 +1,7 @@
 # fluent-plugin-json-schema-filter
 
 [![Build Status](https://travis-ci.org/ansoni/fluent-plugin-json-schema-filter.svg?branch=master)](https://travis-ci.org/ansoni/fluent-plugin-json-schema-filter)
+[![Gem Version](https://badge.fury.io/rb/fluent-plugin-json-schema-filter.svg)](https://badge.fury.io/rb/fluent-plugin-json-schema-filter)
 
 [Fluentd](http://fluentd.org) filter plugin to validate records against a [json-schema](http://json-schema.org)
 
