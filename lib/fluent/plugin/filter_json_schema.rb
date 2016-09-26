@@ -39,8 +39,8 @@ module Fluent
         new_record = record.dup
         begin
           valid, error_msg = validate(record)
-          puts valid
-          puts error_msg
+          log.debug "Match: #{valid}"
+          log.debug "Message: #{error_msg}"
 
           if not valid
             new_record['validation-error']=error_msg if @add_validation_error
