@@ -15,6 +15,7 @@ module Fluent
     config_param :enrich_invalid, :hash, :default => { 'valid' => false }
     config_param :isolate_tag_prefix, :string, :default => "invalid"
     config_param :add_validation_error, :bool, :default => true
+    config_param :schema, :string, :default => nil
 
     def initialize
       super
@@ -23,7 +24,7 @@ module Fluent
 
     def start
       super
-    end 
+    end
 
     def shutdown
       super
@@ -31,6 +32,7 @@ module Fluent
 
     def configure(conf)
       super
+      load_schema
     end
 
     def filter_stream(tag, es)
@@ -72,13 +74,28 @@ module Fluent
     private 
 
     def validate(record) 
+      if @schema.nil?
+        return false, e.message
+      end
+
       begin
-        JSON::Validator.validate!(@schema_file, record)
+        JSON::Validator.validate!(@schema, record)
       rescue JSON::Schema::ValidationError => e
          return false, e.message
       end
       return true, nil
     end
 
+    def load_schema
+      if @schema.nil?
+        begin
+          open(@schema_file, 'r') do |f|
+            @schema = f.read
+          end
+        rescue => e
+          raise Fluent::ConfigError, "failed to read json schema #{e.message}"
+        end
+      end
+    end
   end
 end
